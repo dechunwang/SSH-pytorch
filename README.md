@@ -96,7 +96,7 @@ For a list of all possible options run
   title        = {dechunwang/SSH-pytorch: First release},
   month        = nov,
   year         = 2018,
-  doi          = {10.5281/zenodo.1728203},
-  url          = {https://doi.org/10.5281/zenodo.1728203}
+  doi          = {10.5281/zenodo.1728202},
+  url          = {https://doi.org/10.5281/zenodo.1728202}
 }
 ```
