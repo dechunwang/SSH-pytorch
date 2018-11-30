@@ -3,7 +3,10 @@
 *.txt
 !/demo/*.jpg
 __pycache__
-output/
-check_point/
-data/
+output/*
+!output/.gitignore
+check_point/*
+!check_point/.gitignore
+data/*
+!data/.gitignore
 .idea/
