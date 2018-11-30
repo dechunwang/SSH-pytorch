@@ -1,4 +1,7 @@
 # A pytorch implementation of SSH (Single shot headless) face detector
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1728203.svg)](https://doi.org/10.5281/zenodo.1728203)
+
 ## Introduction
 This project is a pytorch implementation of a Single shot headless face detector. Original paper can be find here [**SSH face detector ICCV 2017 paper**](https://arxiv.org/abs/1708.03979)
 
@@ -85,3 +88,15 @@ python3 eval.py
 ```
 For a list of all possible options run
 ```python3 eval.py --help```.
+
+### Citation
+```
+@misc{dechunwang_2018_1728203,
+  author       = {dechunwang},
+  title        = {dechunwang/SSH-pytorch: First release},
+  month        = nov,
+  year         = 2018,
+  doi          = {10.5281/zenodo.1728203},
+  url          = {https://doi.org/10.5281/zenodo.1728203}
+}
+```
