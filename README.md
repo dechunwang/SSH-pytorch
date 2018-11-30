@@ -24,7 +24,7 @@ Compare to other faster-rcnn pytorch implementation, jwyang's implementation rev
 2. Create conda env by using pytorch.yml provide in this repository
 3. Run ```make``` in the ```model``` directory:
 ```
-cd lib
+cd model
 make
 ```
 ### Training a model
