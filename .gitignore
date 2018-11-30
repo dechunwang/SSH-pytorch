@@ -1,0 +1,9 @@
+*.zip
+*.jpg
+*.txt
+!/demo/*.jpg
+__pycache__
+output/
+check_point/
+data/
+
