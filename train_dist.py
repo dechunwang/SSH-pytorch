@@ -175,7 +175,7 @@ def run(rank, gpu_id, arg, cfg):
 
             # save_check_point(saved_model_path, iter, loss, net, optimizer)
 
-        if (iter % cfg.TRAIN.CHECKPOINT == 0 & int(rank) == 0):
+        if iter % cfg.TRAIN.CHECKPOINT == 0 and int(rank) == 0:
             save_check_point(arg.model_save_path, iter, loss, net, optimizer)
             print("check point saved")
 
