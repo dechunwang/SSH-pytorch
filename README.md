@@ -16,7 +16,7 @@ Compare to other faster-rcnn pytorch implementation, jwyang's implementation rev
 - [x] Support pytorch-1.0
 - [x] Support distributed training (gradient average)
 - [ ] Support multi-gpu(Multi-GPU can be done by using mulitiple distributed training on a single machine. The reason it is not support right now is because of the input size is not a fixed size.)
-- [ ] Match mAP with original paper (current pretrain model have lower mAP (0.88)in wider face dataset that official implementation (0.91). Maybe more training is needed. Great thanks if anyone can help me find out what went wrong)
+- [x] Match mAP with original paper (current pretrain model have lower mAP (0.89)in wider face dataset that official implementation (0.907). Maybe more training is needed. Great thanks if anyone can help me find out what went wrong)
 
 
 ### Installation
