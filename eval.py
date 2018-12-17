@@ -18,7 +18,7 @@ def parser():
                         default='output', type=str)
     parser.add_argument('--gpu_ids', dest='gpu_ids', default='0', type=str,
                         help='gpu devices  to be used')
-    parser.add_argument('--thresh', dest='thresh', default=0.5, type=float,
+    parser.add_argument('--thresh', dest='thresh', default=0.05, type=float,
                         help='Detections with a probability less than this threshold are ignored')
     parser.add_argument('--vis', dest='visualize', help='visualize detections',type=bool,default=False)
     parser.add_argument('--vis_path', dest='visualize_folder', help='visualize result folder', type=str, default="output/result")
