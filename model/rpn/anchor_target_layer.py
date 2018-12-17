@@ -120,11 +120,12 @@ class _AnchorTargetLayer(nn.Module):
                     # ohem_score (A,H,W) to (H,W,A)
                     ohem_scores = ohem_scores.permute(1, 2, 0).contiguous()
                     # ohem_score (H*W*A)
-                    ohem_scores = ohem_scores.view(-1)
+                    ohem_scores = ohem_scores.view(-1,1)
+                    ohem_scores = ohem_scores[inds_inside]
                     # find lowest predicted score
                     pos_ohem_scores = 1 - ohem_scores[fg_inds]
                     #sort by descending order
-                    _, orderd_ohem_score = torch.sort(pos_ohem_scores,descending= True)
+                    _, orderd_ohem_score = torch.sort(pos_ohem_scores,dim = 0,descending = True)
                     # sample ohem score
                     ohem_sampled_fgs = fg_inds[orderd_ohem_score[:num_fg]]
                     labels[i][fg_inds] = -1
@@ -146,11 +147,12 @@ class _AnchorTargetLayer(nn.Module):
                     # ohem_score (A,H,W) to (H,W,A)
                     ohem_scores = ohem_scores.permute(1, 2, 0).contiguous()
                     # ohem_score (H*W*A)
-                    ohem_scores = ohem_scores.view(-1)
+                    ohem_scores = ohem_scores.view(-1,1)
+                    ohem_scores = ohem_scores[inds_inside]
                     # find Highest predicted score
                     neg_ohem_scores = ohem_scores[bg_inds]
                     # sort by descending order
-                    _, orderd_ohem_score = torch.sort(neg_ohem_scores, descending=True)
+                    _, orderd_ohem_score = torch.sort(neg_ohem_scores, dim = 0, descending=True)
                     # sample ohem score
                     ohem_sampled_bgs = bg_inds[orderd_ohem_score[:num_bg]]
                     labels[i][bg_inds] = -1
