@@ -7,7 +7,7 @@ This project is a pytorch implementation of a Single shot headless face detector
 
 official implementation is in Caffe [**SSH/mahyarnajibi**](https://github.com/mahyarnajibi/SSH)
 
-During my implementation of pytorch version, I referred the Faster-RCNN pytorch implementation [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch).
+During my implementation of pytorch version, I referred the Faster-RCNN pytorch implementation [jwyang/faster-rcnn.pytorch]().
 
 Compare to other faster-rcnn pytorch implementation, jwyang's implementation revised all layers from numpy to pytorch. I used anchor_target_layer , generate_anchor_box, propsal_layer and bbox layer for his implementation.
 
@@ -16,7 +16,8 @@ Compare to other faster-rcnn pytorch implementation, jwyang's implementation rev
 - [x] Support pytorch-1.0
 - [x] Support distributed training (gradient average)
 - [ ] Support multi-gpu(Multi-GPU can be done by using mulitiple distributed training on a single machine. The reason it is not support right now is because of the input size is not a fixed size.)
-- [x] Match mAP with original paper (current pretrain model have lower mAP (0.89)in wider face dataset that official implementation (0.907). Maybe more training is needed. Great thanks if anyone can help me find out what went wrong)
+- [x] Match mAP with original paper (current pretrain model have lower mAP (0.88)in wider face dataset that official implementation (0.907). ~~Maybe more training is needed. Great thanks if anyone can help me find out what went wrong)~~
+i fixed a problem in anchor_target_layer. Now i can get( 0.905, 0.890, 0.809) vs SSH:(0.919,0.907,0.809)
 
 
 ### Installation
