@@ -28,6 +28,11 @@ i fixed a problem in anchor_target_layer. Now i can get( 0.905, 0.890, 0.809) vs
 cd model
 make
 ```
+
+### Pretrained model
+download pretrained model by [this link](https://drive.google.com/file/d/19bmuol6CbSqL3pj9SBzUL6UhrxC3XYbC/view?usp=sharing)
+place file under check_point/  folder
+
 ### Training a model
 For training on the *WIDER* dataset, you need to download the [WIDER face training images](https://drive.google.com/file/d/0B6eKvaijfFUDQUUwd21EckhUbWs/view?usp=sharing) and the [face annotations](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/support/bbx_annotation/wider_face_split.zip) from the [dataset website](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/). These files should be copied into ```data/datasets/wider/``` (you can create symbolic links if you prefer to store the actual data somewhere else).
 
