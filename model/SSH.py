@@ -23,7 +23,7 @@ class SSH(nn.Module):
         self.m1_module = net.M1(128)
 
         self.conv5_128 = net.Conv2D(512, 128, 1, False, 1, True)
-        self.conv5_128_up = nn.ConvTranspose2d(128, 128, 4, 2, 1, 1, 128)
+        self.conv5_128_up = nn.ConvTranspose2d(128, 128, 4, 2, 1, 1, 128, False)
         self.con4_128 = net.Conv2D(512, 128, 1, False, 1, True)
         self.con4_fuse_final = net.Conv2D(128, 128, 3, True, 1, True)
 
